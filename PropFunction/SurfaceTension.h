@@ -3,8 +3,8 @@
 
 class SurfaceTension
 {
-    public:
-    int SURFACETension(int Nmin, int Nmax, int Nl, int Nv, int BoxLength, int Temperature);
+public:
+    int SURFACETension(const string& DatFileLocation, int Temperature,int BoxLength);
 };
 
 #endif
