@@ -1,4 +1,5 @@
 #include "FileReadToCreateMap.h"
+#include "datTocsv.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -7,8 +8,14 @@
 #include <string>
 using namespace std;
 
-map<string, vector<string> > FileReadToCreateMap::process_file(const string& file_location) {
-    ifstream input(file_location);
+map<string, vector<string> > FileReadToCreateMap::process_file(const string& DatFileLocation) {
+
+    // Convert .dat to .csv
+    datTocsv datTocsv;
+    string CSVFileLocation = "temp.csv"
+    CSVFileLocation = datTocsv.ConvertDatToCSV(DatFileLocation, CSVFileLocation);
+
+    ifstream input(CSVFileLocation);
     if (!input.is_open()) {
         cerr << "Failed to open input file." << endl;
         return {};
@@ -41,6 +48,8 @@ map<string, vector<string> > FileReadToCreateMap::process_file(const string& fil
             columnIndex++;
         }
     }
+
+    int DeleteCSVFile = remove(CSVFileLocation);
 
     return dataMap;
 }
