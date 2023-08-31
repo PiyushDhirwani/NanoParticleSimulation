@@ -14,7 +14,7 @@ double SurfaceTension::SURFACETension(const string& DatFileLocation, int Tempera
     cout<<setprecision(13);
     FileReadToCreateMap FileReadToCreateMap;
     map<string, vector<string> > dataMap = FileReadToCreateMap.process_file(DatFileLocation);
-    vector<double> NvNminNlNmax=GetLocaMaximaMinima(DatFileLocation);
+    vector<double> NvNminNlNmax=GetLocalMaximaMinima(DatFileLocation);
     double Nv=NvNminNlNmax[0], Nmin=NvNminNlNmax[1], Nl=NvNminNlNmax[2], Nmax=NvNminNlNmax[3];
 
     double Y_Nv=stod(dataMap["y0"][Nv]),Y_Nmin=stod(dataMap["y0"][Nmin]), Y_Nl=stod(dataMap["y0"][Nl]);

@@ -5,7 +5,7 @@
 #include "FileReadToCreateMap.h"
 using namespace std;
 
-vector<double> GetLocaMaximaMinima(const string& DatFileLocation){
+vector<double> GetLocalMaximaMinima(const string& DatFileLocation){
     cout<<setprecision(13);
     FileReadToCreateMap FileReadToCreateMap;
     map<string, vector<string> > dataMap = FileReadToCreateMap.process_file(DatFileLocation);

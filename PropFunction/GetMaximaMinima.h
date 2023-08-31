@@ -3,7 +3,7 @@
 
 class GetMaximaMinima {
 public:
-    vector<double> GetLocaMaximaMinima(const string& DatFileLocation);
+    vector<double> GetLocalMaximaMinima(const string& DatFileLocation);
 };
 
 #endif // DATA_PROCESSOR_H
