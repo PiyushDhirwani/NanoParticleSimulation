@@ -1,8 +1,9 @@
 #ifndef COMPRESSIBILITY_H
 #define COMPRESSIBILITY_H
-class Compressibility {
+class Compressibility
+{
 public:
-    pair<double, double> VaporLiquidCompressibility(const string& DatFileLocation, int Temperature, int BoxLength,int BoltzmannConstant);
+    pair<double, double> VaporLiquidCompressibility(const string &DatFileLocation, int Temperature, int BoxLength, int BoltzmannConstant);
 };
 
 #endif // DATA_PROCESSOR_H

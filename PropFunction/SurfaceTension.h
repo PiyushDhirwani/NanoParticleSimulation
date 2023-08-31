@@ -4,7 +4,7 @@
 class SurfaceTension
 {
 public:
-    int SURFACETension(const string& DatFileLocation, int Temperature,int BoxLength);
+    int SURFACETension(const string &DatFileLocation, int Temperature, int BoxLength);
 };
 
 #endif
