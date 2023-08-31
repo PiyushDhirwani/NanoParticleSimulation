@@ -1,17 +1,13 @@
 #include "FileReadToCreateMap.h"
 #include "delta_u.h"
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <vector>
-#include <map>
+#include <bits/stdc++.h>
 using namespace std;
 
 pair<double, double> delta_u::Delta_U(const string &DatFileLocation, int Temperature, int BoxLength)
 {
     cout << setprecision(13);
     FileReadToCreateMap FileReadToCreateMap;
-    map<string, vector<string>> dataMap = FileReadToCreateMap.process_file(DatFileLocation);
+    map<string, vector<string> > dataMap = FileReadToCreateMap.process_file(DatFileLocation);
     vector<double> delta_u_vector;
     double Volume = pow(BoxLength, 3);
     for (int i = 0; i < dataMap["y0"].size() - 1; i++)
@@ -19,7 +15,7 @@ pair<double, double> delta_u::Delta_U(const string &DatFileLocation, int Tempera
         double delta_u = (-Temperature / Volume) * (stod(dataMap["y0"][i + 1]) - stod(dataMap["y0"][i]));
         delta_u_vector.push_back(delta_u);
     }
-    vector<pair<double, double>> local_maxima, local_minima;
+    vector<pair<double, double> > local_maxima, local_minima;
 
     for (int i = 1; i < dataMap["y0"].size() - 1; i++)
     {

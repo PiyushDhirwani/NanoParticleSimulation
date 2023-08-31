@@ -1,9 +1,5 @@
 #include "datTocsv.h"
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 string datTocsv::ConvertDatToCSV(const string &DatFileLocation, const string &CSVFileLocation)
@@ -12,16 +8,14 @@ string datTocsv::ConvertDatToCSV(const string &DatFileLocation, const string &CS
     ifstream input(DatFileLocation);
     if (!input.is_open())
     {
-        cerr << "Failed to open input file." << endl;
-        return 1;
+        return "Failed to open output file.";
     }
 
     // Open the output CSV file
     ofstream output(CSVFileLocation);
     if (!output.is_open())
     {
-        cerr << "Failed to open output file." << endl;
-        return 1;
+        return "Failed to open output file.";
     }
 
     string line;

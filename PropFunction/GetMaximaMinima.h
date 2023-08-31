@@ -1,6 +1,7 @@
 #ifndef GETMAXIMAMINIMA_H
 #define GETMAXIMAMINIMA_H
-
+#include <bits/stdc++.h>
+using namespace std;
 class GetMaximaMinima
 {
 public:

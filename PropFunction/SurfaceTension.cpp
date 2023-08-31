@@ -1,11 +1,7 @@
 #include "SurfaceTension.h"
 #include "FileReadToCreateMap.h"
 #include "GetMaximaMinima.h"
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <vector>
-#include <map>
+#include <bits/stdc++.h>
 using namespace std;
 
 double SurfaceTension::SURFACETension(const string &DatFileLocation, int Temperature, int BoxLength)
@@ -13,7 +9,7 @@ double SurfaceTension::SURFACETension(const string &DatFileLocation, int Tempera
 
     cout << setprecision(13);
     FileReadToCreateMap FileReadToCreateMap;
-    map<string, vector<string>> dataMap = FileReadToCreateMap.process_file(DatFileLocation);
+    map<string, vector<string> > dataMap = FileReadToCreateMap.process_file(DatFileLocation);
     GetMaximaMinima GetMaximaMinima;
     vector<double> NvNminNlNmax = GetMaximaMinima.GetLocalMaximaMinima(DatFileLocation);
     double Nv = NvNminNlNmax[0], Nmin = NvNminNlNmax[1], Nl = NvNminNlNmax[2], Nmax = NvNminNlNmax[3];

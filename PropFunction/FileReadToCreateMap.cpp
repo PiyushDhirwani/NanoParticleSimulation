@@ -1,14 +1,9 @@
 #include "FileReadToCreateMap.h"
 #include "datTocsv.h"
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <vector>
-#include <map>
-#include <string>
+#include <bits/stdc++.h>
 using namespace std;
 
-map<string, vector<string>> FileReadToCreateMap::process_file(const string &DatFileLocation)
+map<string, vector<string> > FileReadToCreateMap::process_file(const string &DatFileLocation)
 {
 
     // Convert .dat to .csv
@@ -23,7 +18,7 @@ map<string, vector<string>> FileReadToCreateMap::process_file(const string &DatF
         return {};
     }
 
-    map<string, vector<string>> dataMap; // Store values as strings
+    map<string, vector<string> > dataMap; // Store values as strings
 
     string headerLine;
     if (getline(input, headerLine))

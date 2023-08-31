@@ -1,5 +1,7 @@
 #ifndef DELTA_U_H
 #define DELTA_U_H
+#include <bits/stdc++.h>
+using namespace std;
 class delta_u
 {
 public:

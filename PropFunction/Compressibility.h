@@ -1,5 +1,7 @@
 #ifndef COMPRESSIBILITY_H
 #define COMPRESSIBILITY_H
+#include <bits/stdc++.h>
+using namespace std;
 class Compressibility
 {
 public:

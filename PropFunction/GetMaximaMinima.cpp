@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <map>
-#include <string>
+#include <bits/stdc++.h>
 #include "FileReadToCreateMap.h"
 #include "GetMaximaMinima.h"
 using namespace std;
@@ -10,10 +7,9 @@ vector<double> GetMaximaMinima::GetLocalMaximaMinima(const string &DatFileLocati
 {
     cout << setprecision(13);
     FileReadToCreateMap FileReadToCreateMap;
-    map<string, vector<string>> dataMap = FileReadToCreateMap.process_file(DatFileLocation);
+    map<string, vector<string> > dataMap = FileReadToCreateMap.process_file(DatFileLocation);
     vector<double> NvNminNlNmax;
-    vector<pair<double, double>> local_maxima;
-    vector<pair<double, double>> local_minima;
+    vector<pair<double, double> > local_maxima, local_minima;
 
     for (int i = 1; i < dataMap["y0"].size() - 1; i++)
     {
