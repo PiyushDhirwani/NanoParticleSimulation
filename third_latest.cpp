@@ -30,10 +30,10 @@ void Input2D(int NumberOfParitcles, ofstream &outputFile)
     float ParticleType1, ParticleSize1;
     cout << "Enter ParticleType and ParticleSize For Particle 1: ";
     cin >> ParticleType1 >> ParticleSize1;
-    vector<vector<float>> AllCordinates;
+    vector<vector<float> > AllCordinates;
     vector<float> Cordinate(3, 0);
     AllCordinates.push_back(Cordinate);
-    vector<pair<float, float>> Site_TypeDiameter;
+    vector<pair<float, float> > Site_TypeDiameter;
     Site_TypeDiameter.push_back(make_pair(ParticleType1, ParticleSize1));
     // outputFile << "ParticleID x y z ParticleType ParticleSize" << endl;
     // outputFile << 1 << "          " << Cordinate[0] << " " << Cordinate[1] << " " << Cordinate[2] << " " << ParticleType1 << "            " << ParticleSize1 << endl;
@@ -58,18 +58,23 @@ void Input2D(int NumberOfParitcles, ofstream &outputFile)
                << "Site_No		Diameter" << endl;
     for (int i = 0; i < NumberOfParitcles; i++)
     {
-        outputFile << i + 1 << "		" << Site_TypeDiameter[i].second << endl;
+        outputFile << i + 1 << "      		" << Site_TypeDiameter[i].second << endl;
     }
     outputFile << "Types_of_sites:" << endl
                << "Site_No		Site_Type" << endl;
     for (int i = 0; i < NumberOfParitcles; i++)
     {
-        outputFile << i + 1 << "		" << Site_TypeDiameter[i].first << endl;
+        outputFile << i + 1 << "      		" << Site_TypeDiameter[i].first << endl;
     }
-    outputFile << "x	y	z" << endl;
+    outputFile <<"Sites position:"<< endl;
+    int columnwidth = 10;
+    // outputFile <<"x" << setw(columnwidth) << "y" << setw(columnwidth) << "z" << endl;
+    outputFile << fixed <<  "x" << setw(columnwidth) << fixed << "y" << setw(columnwidth) << fixed << "z" << endl;
     for (int i = 0; i < NumberOfParitcles; i++)
     {
-        outputFile << AllCordinates[i][0] << " " << AllCordinates[i][1] << " " << AllCordinates[i][2] << endl;
+        // outputFile << AllCordinates[i][0] << setw(columnwidth) << AllCordinates[i][1] << setw(columnwidth) << AllCordinates[i][2] << endl;
+
+        outputFile <<  fixed << AllCordinates[i][0]<< setw(columnwidth) << fixed <<AllCordinates[i][1]<<setw(columnwidth) << fixed << AllCordinates[i][2] << endl;
     }
     return;
 }
@@ -79,10 +84,10 @@ void Input3D(int NumberOfParitcles, ofstream &outputFile)
     float ParticleType1, ParticleSize1;
     cout << "Enter ParticleType and ParticleSize For Particle 1: ";
     cin >> ParticleType1 >> ParticleSize1;
-    vector<vector<float>> AllCordinates;
+    vector<vector<float> > AllCordinates;
     vector<float> Cordinate(3, 0);
     AllCordinates.push_back(Cordinate);
-    vector<pair<float, float>> Site_TypeDiameter;
+    vector<pair<float, float> > Site_TypeDiameter;
     Site_TypeDiameter.push_back(make_pair(ParticleType1, ParticleSize1));
     // outputFile << "ParticleID x y z ParticleType ParticleSize" << endl;
     // outputFile << 1 << "          " << Cordinate[0] << " " << Cordinate[1] << " " << Cordinate[2] << " " << ParticleType1 << "            " << ParticleSize1 << endl;
@@ -107,18 +112,23 @@ void Input3D(int NumberOfParitcles, ofstream &outputFile)
                << "Site_No		Diameter" << endl;
     for (int i = 0; i < NumberOfParitcles; i++)
     {
-        outputFile << i + 1 << "		" << Site_TypeDiameter[i].second << endl;
+        outputFile << i + 1 << "      		" << Site_TypeDiameter[i].second << endl;
     }
     outputFile << "Types_of_sites:" << endl
                << "Site_No		Site_Type" << endl;
     for (int i = 0; i < NumberOfParitcles; i++)
     {
-        outputFile << i + 1 << "		" << Site_TypeDiameter[i].first << endl;
+        outputFile << i + 1 << "      		" << Site_TypeDiameter[i].first << endl;
     }
-    outputFile << "x	y	z" << endl;
+    outputFile <<"Sites position:"<< endl;
+    int columnwidth = 10;
+    // outputFile <<"x" << setw(columnwidth) << "y" << setw(columnwidth) << "z" << endl;
+    outputFile << fixed <<  "x" << setw(columnwidth) << fixed << "y" << setw(columnwidth) << fixed << "z" << endl;
     for (int i = 0; i < NumberOfParitcles; i++)
     {
-        outputFile << AllCordinates[i][0] << " " << AllCordinates[i][1] << " " << AllCordinates[i][2] << endl;
+        // outputFile << AllCordinates[i][0] << setw(columnwidth) << AllCordinates[i][1] << setw(columnwidth) << AllCordinates[i][2] << endl;
+
+        outputFile <<  fixed << AllCordinates[i][0]<< setw(columnwidth) << fixed <<AllCordinates[i][1]<<setw(columnwidth) << fixed << AllCordinates[i][2] << endl;
     }
     return;
 }

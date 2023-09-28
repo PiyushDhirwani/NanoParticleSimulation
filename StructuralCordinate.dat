@@ -1,0 +1,20 @@
+*****species shape info***************
+No_of_sites = 4
+Site_diameters:
+Site_No		Diameter
+1      		0.5
+2      		0.5
+3      		0.5
+4      		0.5
+Types_of_sites:
+Site_No		Site_Type
+1      		1
+2      		2
+3      		3
+4      		4
+Sites position:
+x         y         z
+0.000000  0.000000  0.000000
+0.500000  0.866025  0.000000
+0.000000  1.000000  0.000000
+-1.000000  0.000000  0.000000
