@@ -149,15 +149,20 @@ int main(int argc, char const *argv[])
     cout << "Enter the number of particles: ";
     cin >> NumberOfParitcles;
     outputFile << "No_of_sites = " << NumberOfParitcles << endl;
-    cout << "Please Enter 0 if you have 2D Structure, Else Enter Any Integer: ";
-    cin >> StructureType;
-    if (StructureType == 0 or NumberOfParitcles <= 3)
-    {
+    if (NumberOfParitcles <= 3){
         Input2D(NumberOfParitcles, outputFile);
     }
-    else
-    {
-        Input3D(NumberOfParitcles, outputFile);
+    else{
+        cout << "Please Enter 0 if you have 2D Structure, Else Enter Any Integer: ";
+        cin >> StructureType;
+        if (StructureType == 0)
+        {
+            Input2D(NumberOfParitcles, outputFile);
+        }
+        else
+        {
+            Input3D(NumberOfParitcles, outputFile);
+        }
     }
     outputFile.close();
     return 0;
