@@ -1,0 +1,6 @@
+//*******species type info***********//
+Site_type   Potential	Epsilon/kB	Range/Cut_off
+1	Square-well	1.0		1.5
+2	Hard-sphere	0		0
+3	Yukawa		1		1
+4	New		1		1

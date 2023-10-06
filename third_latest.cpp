@@ -1,10 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
+const double pi = 3.14159265358979323846; 
 
 vector<float> FindCordinate3D(float EdgeLength, float AnglePhi, float AngleTheta)
 {
 
-    float AnglePhiRadian = M_PI * AnglePhi / 180, AngleThetaRadian = M_PI * AngleTheta / 180;
+    float AnglePhiRadian = pi * AnglePhi / 180, AngleThetaRadian = pi * AngleTheta / 180;
     float XCordinate = EdgeLength * sin(AnglePhiRadian) * cos(AngleThetaRadian), YCordinate = EdgeLength * sin(AnglePhiRadian) * sin(AngleThetaRadian), ZCordinate = EdgeLength * cos(AnglePhiRadian);
     vector<float> Cordinate;
     Cordinate.push_back(XCordinate);
@@ -42,7 +43,7 @@ int main(int argc, char const *argv[])
     cin >> StructureType;
     if (StructureType == 0 or NumberOfParitcles <= 3)
     {
-        int ParticleType1, ParticleSize1;
+        float ParticleType1, ParticleSize1;
         cout << "Enter ParticleType and ParticleSize For Particle 1: ";
         cin >> ParticleType1 >> ParticleSize1;
         vector<float> Cordinate = {0, 0};
@@ -59,7 +60,7 @@ int main(int argc, char const *argv[])
     }
     else
     {
-        int ParticleType1, ParticleSize1;
+        float ParticleType1, ParticleSize1;
         cout << "Enter ParticleType and ParticleSize For Particle 1: ";
         cin >> ParticleType1 >> ParticleSize1;
         vector<float> Cordinate = {0, 0, 0};

@@ -1,1 +1,2 @@
-x y z
+ParticleID x y ParticleType ParticleSize
+1 0 0 1 0.5
