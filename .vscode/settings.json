@@ -1,5 +1,6 @@
 {
     "files.associations": {
+<<<<<<< HEAD
         "iosfwd": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
@@ -48,5 +49,8 @@
         "xtr1common": "cpp",
         "xtree": "cpp",
         "xutility": "cpp"
+=======
+        "iomanip": "cpp"
+>>>>>>> c1302440949e2aa4404ec6fb5b71d9a0b1323ba6
     }
 }
