@@ -1,0 +1,7 @@
+Site_type	Potential	Epsilon/kB	Range/Cut_off
+1	Square-well	0.879549	1.7124
+2	Hard-sphere	1.08382	0.77147
+3	Yukawa		1.72963	0.515289
+4	New		1.29583	1.81996
+5	Square-well	0.33978	1.17975
+6	New		1.4762		0.994894
